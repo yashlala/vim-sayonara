@@ -1,3 +1,11 @@
+This repository contains a patched version of mhinz/vim-sayonara for personal
+use. It's exactly the same as upstream, except it avoids quitting (n)vim when
+the `g:sayonara_dont_quit` variable is set. 
+
+Below is the original README. 
+
+---
+
 ![vim-sayonara](https://github.com/mhinz/vim-sayonara/blob/master/image/sayonara.png)
 
 This plugin provides a single command that deletes the current buffer and
