@@ -21,16 +21,16 @@ endfunction
 " s:prototype.handle_modified_buffer() {{{1
 function! s:prototype.handle_modified_buffer()
   if &modified
-    echo 'Unsaved changes: [w]rite, [s]kip, [b]reak '
+    echo 'Save changes? [y]es, [n]o, [c]ancel '
     let choice = nr2char(getchar())
-    if choice == 'w'
+    if choice == 'y'
       try
         write
       catch /E32/
         redraw | echohl ErrorMsg | echomsg 'No file name.' | echohl NONE
         return 'return'
       endtry
-    elseif choice == 's'
+    elseif choice == 'n'
       return ''
     else
       redraw!
