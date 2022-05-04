@@ -21,7 +21,7 @@ endfunction
 " s:prototype.handle_modified_buffer() {{{1
 function! s:prototype.handle_modified_buffer()
   if &modified
-    echo 'Save changes? [y]es, [n]o, [c]ancel '
+    echo 'Save changes? [y]es, [n]o, [C]ancel '
     let choice = nr2char(getchar())
     if choice == 'y'
       try
